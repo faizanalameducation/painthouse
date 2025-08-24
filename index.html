@@ -184,6 +184,8 @@
             border-radius: 50%;
             animation: morph 8s ease-in-out infinite;
             z-index: 1;
+            /* Performance Optimization */
+            will-change: border-radius, transform;
         }
 
         @keyframes float {
@@ -247,7 +249,8 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             margin-bottom: 1rem;
-            animation: slideInUp 1s ease;
+            /* FIX: Faster animation */
+            animation: slideInUp 0.6s ease;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             line-height: 1.1;
         }
@@ -255,7 +258,8 @@
         .hero p {
             font-size: clamp(1.2rem, 3vw, 1.5rem);
             margin-bottom: 2rem;
-            animation: slideInUp 1s ease 0.3s both;
+            /* FIX: Faster animation and adjusted delay */
+            animation: slideInUp 0.6s ease 0.2s both;
             opacity: 0.9;
         }
 
@@ -271,7 +275,8 @@
             letter-spacing: 0.5px;
             text-transform: uppercase;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: slideInUp 1s ease 0.6s both;
+            /* FIX: Faster animation and adjusted delay */
+            animation: slideInUp 0.6s ease 0.4s both;
             box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
             position: relative;
             overflow: hidden;
@@ -343,7 +348,8 @@
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            /* FIX: Faster transition */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid rgba(79, 70, 229, 0.1);
             position: relative;
             overflow: hidden;
@@ -389,6 +395,8 @@
             color: white;
             font-size: 2rem;
             animation: float-icon 3s ease-in-out infinite;
+            /* Performance Optimization */
+            will-change: transform;
         }
 
         @keyframes float-icon {
@@ -471,7 +479,8 @@
             position: relative;
             opacity: 0;
             transform: translateY(50px);
-            transition: all 0.6s ease;
+            /* FIX: Faster transition */
+            transition: all 0.5s ease;
         }
 
         .process-step.visible {
@@ -730,12 +739,11 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <a href="#home" class="logo">
-  <img src="Logo.png" alt="Paint House" style="height: 40px;">
-</a>
+                <img src="assets/Logo.png" alt="Paint House" style="height: 40px;">
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -759,7 +767,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Transform Your Space</h1>
@@ -768,7 +775,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
                 <h2 class="section-title">Our Services</h2>
@@ -837,7 +843,6 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section id="gallery" class="gallery">
             <div class="container">
                 <h2 class="section-title">Our Recent Projects</h2>
@@ -869,13 +874,13 @@
                     <div class="gallery-item">
                         <img src="assets/WhatsApp Image 2025-07-13 at 00.24.39_ddc0ecbe.jpg" alt="Home Decor Project">
                     </div>
-                                        <div class="gallery-item">
+                    <div class="gallery-item">
                         <img src="assets/WhatsApp Image 2025-07-13 at 00.24.40_4555448a.jpg" alt="Home Decor Project">
                     </div>
-                                        <div class="gallery-item">
+                    <div class="gallery-item">
                         <img src="assets/WhatsApp Image 2025-07-13 at 00.24.41_d30c2db4.jpg" alt="Home Decor Project">
                     </div>
-                                        <div class="gallery-item">
+                    <div class="gallery-item">
                         <img src="assets/WhatsApp Image 2025-07-13 at 00.24.42_5f8eccfb.jpg" alt="Home Decor Project">
                     </div>
                     <div class="gallery-item">
@@ -891,7 +896,6 @@
             </div>
         </section>
 
-        <!-- Process Section -->
         <section id="process" class="process">
             <div class="container">
                 <h2 class="section-title">Our Process</h2>
@@ -930,7 +934,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
                 <h2 class="section-title">Get in Touch</h2>
@@ -948,17 +951,15 @@
                     </div>
                     <div class="map-container">
                         <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--primary-color);">Find Our Location</h3>
-<iframe
-    src="https://www.google.com/maps?q=22.824021773540416,86.20110458443608&hl=en&z=15&output=embed"
-    width="100%"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-
+                        <iframe
+                            src="https://www.google.com/maps?q=22.824021773540416,86.20110458443608&hl=en&z=15&output=embed"
+                            width="100%"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                         <p class="address">Old Purulia Road, Near Karim City College Chowk, Zakir Nagar, Mango, Jamshedpur - 831012</p>
                     </div>
                 </div>
@@ -966,14 +967,12 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Paint House. All rights reserved.</p>
+            <p>© 2025 Paint House. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919931535916" class="whatsapp-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -1010,39 +1009,56 @@
             }
         });
 
-        // Parallax effect for hero section
+        // FIX: Performance optimization for scroll effects
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
         let ticking = false;
-        function updateParallax() {
+
+        function updateEffectsOnScroll() {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
             const heroContent = document.querySelector('.hero-content');
-            
+
+            // Parallax Logic
             if (hero && scrolled < hero.offsetHeight) {
                 hero.style.transform = `translateY(${scrolled * 0.2}px)`;
                 if (heroContent) {
                     heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
                 }
             }
+
+            // Header Logic
+            if (scrolled > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+            if (scrolled > lastScrollTop && scrolled > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrolled <= 0 ? 0 : scrolled;
+
+            // Dynamic Background Logic
+            const scrollPercent = (scrolled / (document.body.scrollHeight - window.innerHeight)) * 100;
+            const hue = Math.floor(240 + (scrollPercent * 1.2));
+            document.documentElement.style.setProperty('--dynamic-hue', hue);
+            
             ticking = false;
         }
 
-        function requestParallaxUpdate() {
+        function requestUpdate() {
             if (!ticking) {
-                requestAnimationFrame(updateParallax);
+                requestAnimationFrame(updateEffectsOnScroll);
                 ticking = true;
             }
         }
-
-        window.addEventListener('scroll', requestParallaxUpdate);
-
-        // Dynamic background color change based on scroll position
-        function updateDynamicBackground() {
-            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            const hue = Math.floor(240 + (scrollPercent * 1.2)); // Start from 240 (blue) and change gradually
-            document.documentElement.style.setProperty('--dynamic-hue', hue);
-        }
-
-        window.addEventListener('scroll', throttle(updateDynamicBackground, 100));
+        
+        // Use a single, optimized event listener for all scroll effects
+        window.addEventListener('scroll', requestUpdate);
 
         // Create floating particles for hero section
         function createParticle() {
@@ -1063,8 +1079,8 @@
             }, parseFloat(particle.style.animationDuration) * 1000);
         }
 
-        // Create particles periodically
-        setInterval(createParticle, 300);
+        // FIX: Create particles less frequently to improve performance
+        setInterval(createParticle, 500);
 
         // Intersection Observer for animations
         const observerOptions = {
@@ -1091,113 +1107,31 @@
                 observer.observe(el);
             });
 
-            // Staggered animation for service cards
+            // FIX: Faster staggered animation for service cards
             const serviceCards = document.querySelectorAll('.service-card');
             serviceCards.forEach((card, index) => {
-                card.style.transitionDelay = `${index * 100}ms`;
+                card.style.transitionDelay = `${index * 50}ms`;
             });
 
-            // Staggered animation for gallery items
+            // FIX: Faster staggered animation for gallery items
             const galleryItems = document.querySelectorAll('.gallery-item');
             galleryItems.forEach((item, index) => {
-                item.style.transitionDelay = `${index * 150}ms`;
+                item.style.transitionDelay = `${index * 75}ms`;
             });
 
-            // Staggered animation for process steps
+            // FIX: Faster staggered animation for process steps
             const processSteps = document.querySelectorAll('.process-step');
             processSteps.forEach((step, index) => {
-                step.style.transitionDelay = `${index * 200}ms`;
+                step.style.transitionDelay = `${index * 100}ms`;
             });
         });
-
-        // Header scroll effect
-        let lastScrollTop = 0;
-        const header = document.querySelector('.header');
-
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(20px)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            }
-
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up
-                header.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollTop = scrollTop;
-        });
-
-        // Performance optimization: Throttle function
-        function throttle(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
-        // Preload images for better performance
-        function preloadImages() {
-            const images = [
-                'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop'
-            ];
-
-            images.forEach(src => {
-                const img = new Image();
-                img.src = src;
-            });
-        }
-
-        // Initialize on page load
-        window.addEventListener('load', function() {
-            preloadImages();
-            // Add any additional initialization here
-        });
-
+        
         // Add keyboard navigation support
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 mobileMenu.classList.remove('active');
             }
         });
-
-        // Add smooth scroll behavior for better UX
-        if ('scrollBehavior' in document.documentElement.style) {
-            // Browser supports smooth scrolling
-        } else {
-            // Polyfill for browsers that don't support smooth scrolling
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
     </script>
 </body>
 </html>
-
-
