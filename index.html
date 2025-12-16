@@ -371,9 +371,21 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(1, 1fr);
             gap: 2rem;
             margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
         .service-card {
@@ -927,6 +939,46 @@
                         <h3>Commercial Interior</h3>
                         <p>Specialized commercial interior design for offices, retail spaces, and business
                             establishments. We create functional and aesthetic environments.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-home"></i></div>
+                        <h3>Home Decor</h3>
+                        <p>Curated <strong>home decor</strong> selection and placement to complement your interior
+                            design perfectly. We offer the best <strong>wall decor</strong>, <strong>room
+                                decor</strong>, and <strong>wall hanging</strong> solutions.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h3>Architectural Design</h3>
+                        <p>Interior <strong>architectural design</strong> services for unique, functional, and
+                            aesthetically pleasing spaces. Expert <strong>architecture</strong> planning for your dream
+                            home.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chair"></i></div>
+                        <h3>Living Room Design</h3>
+                        <p>Create the perfect living space that reflects your personality. We specialize in
+                            <strong>false ceiling design for hall</strong> and <strong>fall ceiling design for
+                                hall</strong> to elevate your interiors.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Office Space Design</h3>
+                        <p>Productive and inspiring office environments designed to boost performance and creativity.
+                            Modern solutions for your workspace.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Restaurant Design</h3>
+                        <p>Attractive restaurant interiors that enhance dining experiences. We create stunning
+                            <strong>kitchens designs</strong> and dining areas that attract customers.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-swatchbook"></i></div>
+                        <h3>Interior Decorating</h3>
+                        <p>Complete decorating services with attention to detail. From <strong>interior decoration for
+                                bedroom</strong> to custom <strong>bed design for home</strong>, we bring your vision to
+                            life.</p>
                     </div>
                 </div>
             </div>
