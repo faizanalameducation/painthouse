@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paint House - Your Home Transformation Experts</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Paint House - Premier Paint Shop & Interior Design in Jamshedpur</title>
+    <meta name="description"
+        content="Transform your home with Paint House, the leading paint shop in Mango, Jamshedpur. We offer premium paints, interior design, waterproofing, and texture painting services. Visit us for the best room colour combinations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Async FontAwesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+    <!-- Async Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap">
+    </noscript>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
         :root {
-            --primary-color: #4f46e5;
-            --secondary-color: #7c3aed;
-            --accent-color: #06b6d4;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --background-light: #f8fafc;
-            --dynamic-hue: 240;
+            /* Premium Red Theme (Matches Logo) */
+            --primary-color: #991b1b;
+            /* Red-800 */
+            --secondary-color: #d97706;
+            /* Amber-600 */
+            --accent-color: #78350f;
+            /* Amber-900 */
+            --text-dark: #1c1917;
+            /* Stone-900 */
+            --text-light: #44403c;
+            /* Stone-700 */
+            --background-light: #fafaf9;
+            /* Stone-50 */
+            --background-off-white: #f5f5f4;
+            /* Stone-100 */
+            --dynamic-hue: 0;
         }
 
         * {
@@ -26,9 +50,20 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
             line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .logo {
+            font-family: 'Outfit', sans-serif;
         }
 
         html {
@@ -53,7 +88,7 @@
         .header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -73,9 +108,10 @@
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--primary-color);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
@@ -93,7 +129,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .nav-links a::after {
@@ -103,7 +139,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-color);
+            background: var(--secondary-color);
             transition: width 0.3s ease;
         }
 
@@ -127,7 +163,7 @@
             left: 0;
             right: 0;
             background: white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             border-radius: 0 0 20px 20px;
             padding: 1rem 0;
         }
@@ -148,9 +184,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, 
-                hsl(calc(var(--dynamic-hue)), 70%, 65%) 0%, 
-                hsl(calc(var(--dynamic-hue) + 30), 60%, 55%) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #450a0a 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -169,8 +203,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paint" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23paint)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paint" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23paint)"/></svg>');
             animation: float 20s infinite linear;
+            opacity: 0.3;
         }
 
         .hero::after {
@@ -180,32 +215,41 @@
             right: 10%;
             width: 200px;
             height: 200px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(217, 119, 6, 0.1);
             border-radius: 50%;
             animation: morph 8s ease-in-out infinite;
             z-index: 1;
-            /* Performance Optimization */
             will-change: border-radius, transform;
         }
 
         @keyframes float {
-            0% { transform: translateX(-100px); }
-            100% { transform: translateX(100px); }
+            0% {
+                transform: translateX(-100px);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
         }
 
         @keyframes morph {
-            0%, 100% {
+
+            0%,
+            100% {
                 border-radius: 50% 50% 50% 50%;
                 transform: rotate(0deg) scale(1);
             }
+
             25% {
                 border-radius: 60% 40% 30% 70%;
                 transform: rotate(90deg) scale(1.1);
             }
+
             50% {
                 border-radius: 30% 70% 70% 30%;
                 transform: rotate(180deg) scale(0.9);
             }
+
             75% {
                 border-radius: 70% 30% 50% 50%;
                 transform: rotate(270deg) scale(1.05);
@@ -216,7 +260,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             pointer-events: none;
             animation: particleFloat 4s linear infinite;
@@ -227,12 +271,15 @@
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0;
@@ -241,76 +288,52 @@
 
         .hero-content {
             z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             padding: 0 2rem;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            /* FIX: Faster animation */
-            animation: slideInUp 0.6s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
             line-height: 1.1;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .hero p {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
-            margin-bottom: 2rem;
-            /* FIX: Faster animation and adjusted delay */
-            animation: slideInUp 0.6s ease 0.2s both;
-            opacity: 0.9;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1.2rem 3rem;
+            background: var(--secondary-color);
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-size: 1rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            /* FIX: Faster animation and adjusted delay */
-            animation: slideInUp 0.6s ease 0.4s both;
-            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);
             position: relative;
             overflow: hidden;
+            border: none;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            box-shadow: 0 15px 35px rgba(217, 119, 6, 0.6);
+            background: #b45309;
+            /* Amber-700 */
         }
 
         /* Services Section */
@@ -326,82 +349,67 @@
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 600;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
             text-align: center;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4rem;
+            font-size: 0.9rem;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
 
         .service-card {
             background: white;
-            padding: 2.5rem;
+            padding: 3rem 2rem;
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            /* FIX: Faster transition */
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(79, 70, 229, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
             position: relative;
             overflow: hidden;
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-        .service-card.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
-            border-color: rgba(79, 70, 229, 0.3);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            transition: left 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            left: 0;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(153, 27, 27, 0.15);
+            border-bottom-color: var(--secondary-color);
         }
 
         .service-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 20px;
+            width: 80px;
+            height: 80px;
+            background: var(--background-off-white);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: white;
-            font-size: 2rem;
-            animation: float-icon 3s ease-in-out infinite;
-            /* Performance Optimization */
-            will-change: transform;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            transition: all 0.3s ease;
         }
 
-        @keyframes float-icon {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        .service-card:hover .service-icon {
+            background: var(--secondary-color);
+            color: white;
         }
 
         .service-card h3 {
@@ -431,22 +439,15 @@
 
         .gallery-item {
             overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
-            opacity: 0;
-            transform: scale(0.9);
-        }
-
-        .gallery-item.visible {
-            opacity: 1;
-            transform: scale(1);
         }
 
         .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .gallery-item img {
@@ -454,7 +455,7 @@
             height: 250px;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
 
         .gallery-item:hover img {
@@ -464,7 +465,7 @@
         /* Process Section */
         .process {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: var(--background-off-white);
         }
 
         .process-steps {
@@ -477,15 +478,7 @@
         .process-step {
             text-align: center;
             position: relative;
-            opacity: 0;
-            transform: translateY(50px);
-            /* FIX: Faster transition */
-            transition: all 0.5s ease;
-        }
-
-        .process-step.visible {
-            opacity: 1;
-            transform: translateY(0);
+            transition: all 0.3s ease;
         }
 
         .step-number {
@@ -502,6 +495,8 @@
             font-weight: bold;
             position: relative;
             z-index: 2;
+            border: none;
+            box-shadow: 0 10px 20px rgba(153, 27, 27, 0.3);
         }
 
         .step-number::before {
@@ -509,7 +504,7 @@
             position: absolute;
             width: 100px;
             height: 100px;
-            background: rgba(79, 70, 229, 0.2);
+            background: rgba(153, 27, 27, 0.1);
             border-radius: 50%;
             top: -10px;
             left: -10px;
@@ -517,8 +512,15 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.2); opacity: 0; }
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
         }
 
         .process-step h3 {
@@ -550,7 +552,8 @@
             background: var(--background-light);
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-color);
         }
 
         .contact-item {
@@ -582,9 +585,9 @@
 
         .map-container {
             background: var(--background-light);
-            padding: 2.5rem;
+            padding: 1rem;
             border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .map-container iframe {
@@ -599,6 +602,7 @@
             color: var(--text-light);
             font-size: 0.9rem;
             line-height: 1.5;
+            padding: 0 1rem;
         }
 
         /* Footer */
@@ -607,6 +611,7 @@
             color: white;
             padding: 3rem 0;
             text-align: center;
+            border-top: none;
         }
 
         .social-links {
@@ -623,7 +628,7 @@
         }
 
         .social-links a:hover {
-            color: white;
+            color: var(--secondary-color);
         }
 
         /* Floating WhatsApp Button */
@@ -653,9 +658,22 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
         }
 
         /* Responsive Design */
@@ -680,15 +698,20 @@
                 font-size: 1.2rem;
             }
 
-            .services, .gallery, .process, .contact {
+            .services,
+            .gallery,
+            .process,
+            .contact {
                 padding: 60px 0;
             }
 
-            .service-card, .gallery-item {
+            .service-card,
+            .gallery-item {
                 margin-bottom: 1.5rem;
             }
 
-            .services-grid, .gallery-grid {
+            .services-grid,
+            .gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -721,28 +744,109 @@
         }
 
         .focus-visible:focus {
-            outline: 2px solid var(--primary-color);
+            outline: 2px solid var(--secondary-color);
             outline-offset: 2px;
         }
 
-        /* Loading States */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        /* Brand Partners Section */
+        .brand-partners {
+            padding: 60px 0;
+            background: white;
+            overflow: hidden;
         }
 
-        .fade-in.visible {
+        .brand-slider {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .brand-track {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            animation: scroll 20s linear infinite;
+            padding: 2rem 0;
+            white-space: nowrap;
+        }
+
+        .brand-logo {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(0%);
             opacity: 1;
-            transform: translateY(0);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Paint House",
+      "image": "https://painthouse.com/assets/Logo.png",
+      "description": "Premier Paint Shop & Interior Design in Jamshedpur. We offer premium paints, waterproofing, texture painting, and interior design services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Purulia Road, Near Karim City College Chowk, Zakir Nagar, Mango",
+        "addressLocality": "Jamshedpur",
+        "postalCode": "831012",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.824021773540416,
+        "longitude": 86.20110458443608
+      },
+      "url": "https://painthouse.com",
+      "telephone": "+919931535916",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/painthouse",
+        "https://www.instagram.com/painthouse"
+      ]
+    }
+    </script>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
             <a href="#home" class="logo">
-                <img src="assets/Logo.png" alt="Paint House" style="height: 40px;">
+                <img src="assets/Logo.png" alt="Paint House" style="height: 40px;" width="270" height="40">
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -751,7 +855,7 @@
                 <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="mobile-menu" id="mobile-menu">
@@ -769,75 +873,94 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Transform Your Space</h1>
-                <p>Professional Interior Design & Painting Services</p>
+                <h1>Premier Paint Shop & Interior Design in Jamshedpur</h1>
+                <p>Your trusted partner for premium <strong>paint</strong>, waterproofing, and texture painting. We are
+                    the leading <strong>paint shop in Mango Jamshedpur</strong>, providing top-quality <strong>paint for
+                        wall</strong> and house. Visit us to explore the best <strong>bedroom colour
+                        combinations</strong> and transform your home.</p>
                 <a href="#services" class="cta-button">Explore Our Services</a>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
+                <h2 class="section-title">Our Expertise</h2>
+                <div class="section-subtitle">Transforming Spaces, Elevating Lifestyles</div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">🎨</div>
-                        <h3>Paint Shop</h3>
-                        <p>Premium quality paints and painting supplies for all your projects with expert color consultation.</p>
+                        <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                        <h3>Paint Shop in Mango</h3>
+                        <p>Looking for a <strong>paint shop near me</strong>? We are the top <strong>paint shop in
+                                Mango</strong>, offering premium quality paints and supplies. Find the perfect
+                            <strong>room colour</strong> and <strong>normal bedroom colour</strong> with our expert
+                            guidance.
+                        </p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🏠</div>
+                        <div class="service-icon"><i class="fas fa-couch"></i></div>
                         <h3>Interior Designer</h3>
-                        <p>Complete interior design solutions tailored to your style, needs, and budget requirements.</p>
+                        <p>Our professional interior design services bring your vision to life. We specialize in
+                            creating stunning <strong>paint house</strong> interiors that reflect your unique style and
+                            personality.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🛡️</div>
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
                         <h3>Waterproofing</h3>
-                        <p>Protect your property with our advanced waterproofing solutions and long-lasting treatments.</p>
+                        <p>Protect your <strong>painted dukaan</strong> (shop) and home with our advanced waterproofing
+                            solutions. We ensure long-lasting protection against moisture and dampness for every
+                            structure.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">✨</div>
+                        <div class="service-icon"><i class="fas fa-fill-drip"></i></div>
                         <h3>Texture Painting</h3>
-                        <p>Add depth and character to your walls with our specialized texture painting expertise.</p>
+                        <p>As a skilled <strong>substance painter</strong> team, we add depth and character to your
+                            walls with specialized texture painting techniques unique to Jamshedpur.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🖌️</div>
+                        <div class="service-icon"><i class="fas fa-brush"></i></div>
                         <h3>Wall Painting</h3>
-                        <p>Professional wall painting services for residential and commercial spaces with premium finishes.</p>
+                        <p>Professional <strong>paint for wall</strong> services for residential and commercial spaces.
+                            We deliver flawless finishes that enhance the beauty of your property.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🏢</div>
+                        <div class="service-icon"><i class="fas fa-building"></i></div>
                         <h3>Commercial Interior</h3>
-                        <p>Specialized commercial interior design for offices, retail spaces, and business establishments.</p>
+                        <p>Specialized commercial interior design for offices, retail spaces, and business
+                            establishments. We create functional and aesthetic environments.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🛋️</div>
-                        <h3>Home Decor</h3>
-                        <p>Curated home decor selection and placement to complement your interior design perfectly.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏛️</div>
-                        <h3>Architectural Design</h3>
-                        <p>Interior architectural design services for unique, functional, and aesthetically pleasing spaces.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🪑</div>
-                        <h3>Living Room Design</h3>
-                        <p>Create the perfect living space that reflects your personality and lifestyle preferences.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">💼</div>
-                        <h3>Office Space Design</h3>
-                        <p>Productive and inspiring office environments designed to boost performance and creativity.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🍽️</div>
-                        <h3>Restaurant Design</h3>
-                        <p>Attractive restaurant interiors that enhance dining experiences and customer satisfaction.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎪</div>
-                        <h3>Interior Decorating</h3>
-                        <p>Complete decorating services with attention to detail to bring your vision to life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Partners Section -->
+        <section id="brands" class="brand-partners">
+            <div class="container">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 3rem;">Our Brand Partners</h2>
+                <div class="brand-slider">
+                    <div class="brand-track">
+                        <!-- Original Set -->
+                        <img src="assets/Brand Partner/asian-paints.png" alt="Asian Paints" class="brand-logo"
+                            width="98" height="80" loading="lazy">
+                        <img src="assets/Brand Partner/birla-white.png" alt="Birla White" class="brand-logo" width="80"
+                            height="80" loading="lazy">
+                        <img src="assets/Brand Partner/dulux.png" alt="Dulux" class="brand-logo" width="122" height="80"
+                            loading="lazy">
+                        <img src="assets/Brand Partner/nerolac-logo.png" alt="Nerolac" class="brand-logo" width="296"
+                            height="80" loading="lazy">
+                        <img src="assets/Brand Partner/wallputty-jk-wallputy.jpg" alt="JK Wall Putty" class="brand-logo"
+                            width="80" height="80" loading="lazy">
+
+                        <!-- Duplicate Set for Infinite Scroll -->
+                        <img src="assets/Brand Partner/asian-paints.png" alt="Asian Paints" class="brand-logo"
+                            width="98" height="80" loading="lazy">
+                        <img src="assets/Brand Partner/birla-white.png" alt="Birla White" class="brand-logo" width="80"
+                            height="80" loading="lazy">
+                        <img src="assets/Brand Partner/dulux.png" alt="Dulux" class="brand-logo" width="122" height="80"
+                            loading="lazy">
+                        <img src="assets/Brand Partner/nerolac-logo.png" alt="Nerolac" class="brand-logo" width="296"
+                            height="80" loading="lazy">
+                        <img src="assets/Brand Partner/wallputty-jk-wallputy.jpg" alt="JK Wall Putty" class="brand-logo"
+                            width="80" height="80" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -846,51 +969,70 @@
         <section id="gallery" class="gallery">
             <div class="container">
                 <h2 class="section-title">Our Recent Projects</h2>
+                <div class="section-subtitle">A Glimpse into Our Masterpieces</div>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.23.34_53836b0b.jpg" alt="Modern Living Room Design">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.23.34_53836b0b.jpg"
+                            alt="Modern Living Room Design - Paint House Jamshedpur" width="1080" height="773"
+                            loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.33_652009ec.jpg" alt="Contemporary Kitchen Interior">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.33_652009ec.jpg"
+                            alt="Contemporary Kitchen Interior - Paint Shop Mango" width="1080" height="773"
+                            loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.35_70c7221f.jpg" alt="Elegant Bedroom Design">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.35_70c7221f.jpg"
+                            alt="Elegant Bedroom Design - Room Colour Combinations" width="1080" height="773"
+                            loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.36_36bb99c6.jpg" alt="Office Space Interior">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.36_36bb99c6.jpg"
+                            alt="Office Space Interior - Commercial Design" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.37_0c702a51.jpg" alt="Restaurant Interior Design">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.37_0c702a51.jpg"
+                            alt="Restaurant Interior Design - Jamshedpur" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.37_3b9e4518.jpg" alt="Commercial Space Design">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.37_3b9e4518.jpg"
+                            alt="Commercial Space Design - Painted Dukaan" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.37_86bb23ef.jpg" alt="Texture Painting Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.37_86bb23ef.jpg"
+                            alt="Texture Painting Project - Substance Painter" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.38_ee5e6a39.jpg" alt="Wall Painting Service">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.38_ee5e6a39.jpg"
+                            alt="Wall Painting Service - Premium Finish" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.39_ddc0ecbe.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.39_ddc0ecbe.jpg"
+                            alt="Home Decor Project - Interior Design" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.40_4555448a.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.40_4555448a.jpg"
+                            alt="Luxury Living Room - Paint House" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.41_d30c2db4.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.41_d30c2db4.jpg"
+                            alt="Modern Bedroom - Normal Bedroom Colour" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.42_5f8eccfb.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.42_5f8eccfb.jpg"
+                            alt="Creative Wall Texture - Jamshedpur" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.43_2bfee5dd.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.43_2bfee5dd.jpg"
+                            alt="Elegant Dining Area - Interior Decor" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.44_965abbf5.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.44_965abbf5.jpg"
+                            alt="Minimalist Office Design - Paint Shop" width="1080" height="773" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.45_adb9cd2c.jpg" alt="Home Decor Project">
+                        <img src="assets/WhatsApp Image 2025-07-13 at 00.24.45_adb9cd2c.jpg"
+                            alt="Cozy Home Interior - Paint House" width="1080" height="773" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -899,36 +1041,43 @@
         <section id="process" class="process">
             <div class="container">
                 <h2 class="section-title">Our Process</h2>
+                <div class="section-subtitle">From Concept to Creation</div>
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h3>Consultation</h3>
-                        <p>We start with a detailed consultation to understand your vision, requirements, and budget constraints.</p>
+                        <p>We start with a detailed consultation to understand your vision, requirements, and budget
+                            constraints.</p>
                     </div>
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h3>Design & Planning</h3>
-                        <p>Our experts create detailed designs and comprehensive plans that bring your vision to life.</p>
+                        <p>Our experts create detailed designs and comprehensive plans that bring your vision to life.
+                        </p>
                     </div>
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <h3>Material Selection</h3>
-                        <p>We help you choose the perfect materials, colors, and finishes for your specific project needs.</p>
+                        <p>We help you choose the perfect materials, colors, and finishes for your specific project
+                            needs.</p>
                     </div>
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <h3>Execution</h3>
-                        <p>Our skilled craftsmen execute the project with precision, quality, and attention to every detail.</p>
+                        <p>Our skilled craftsmen execute the project with precision, quality, and attention to every
+                            detail.</p>
                     </div>
                     <div class="process-step">
                         <div class="step-number">5</div>
                         <h3>Quality Check</h3>
-                        <p>We conduct thorough quality checks to ensure everything meets our high standards and your expectations.</p>
+                        <p>We conduct thorough quality checks to ensure everything meets our high standards and your
+                            expectations.</p>
                     </div>
                     <div class="process-step">
                         <div class="step-number">6</div>
                         <h3>Final Handover</h3>
-                        <p>We deliver your transformed space and provide comprehensive maintenance guidance for longevity.</p>
+                        <p>We deliver your transformed space and provide comprehensive maintenance guidance for
+                            longevity.</p>
                     </div>
                 </div>
             </div>
@@ -937,11 +1086,15 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2 class="section-title">Get in Touch</h2>
+                <div class="section-subtitle">Visit Our Paint Shop in Mango</div>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--primary-color);">Contact Us Directly</h3>
+                        <h3
+                            style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--primary-color);">
+                            Contact Us Directly</h3>
                         <div class="contact-item">
-                            <h3><i class="fab fa-whatsapp" style="color: #25d366; margin-right: 0.5rem;"></i>Imteyaz:</h3>
+                            <h3><i class="fab fa-whatsapp" style="color: #25d366; margin-right: 0.5rem;"></i>Imteyaz:
+                            </h3>
                             <a href="https://wa.me/919931535916" target="_blank">+91 99315 35916</a>
                         </div>
                         <div class="contact-item">
@@ -950,17 +1103,16 @@
                         </div>
                     </div>
                     <div class="map-container">
-                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--primary-color);">Find Our Location</h3>
+                        <h3
+                            style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--primary-color);">
+                            Find Our Location</h3>
                         <iframe
                             src="https://www.google.com/maps?q=22.824021773540416,86.20110458443608&hl=en&z=15&output=embed"
-                            width="100%"
-                            height="450"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Google Maps Location">
                         </iframe>
-                        <p class="address">Old Purulia Road, Near Karim City College Chowk, Zakir Nagar, Mango, Jamshedpur - 831012</p>
+                        <p class="address">Old Purulia Road, Near Karim City College Chowk, Zakir Nagar, Mango,
+                            Jamshedpur - 831012</p>
                     </div>
                 </div>
             </div>
@@ -1016,16 +1168,8 @@
 
         function updateEffectsOnScroll() {
             const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const heroContent = document.querySelector('.hero-content');
 
-            // Parallax Logic
-            if (hero && scrolled < hero.offsetHeight) {
-                hero.style.transform = `translateY(${scrolled * 0.2}px)`;
-                if (heroContent) {
-                    heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
-                }
-            }
+            // Removed Parallax Logic to fix overlap issue
 
             // Header Logic
             if (scrolled > 100) {
@@ -1044,9 +1188,9 @@
 
             // Dynamic Background Logic
             const scrollPercent = (scrolled / (document.body.scrollHeight - window.innerHeight)) * 100;
-            const hue = Math.floor(240 + (scrollPercent * 1.2));
+            const hue = Math.floor(0 + (scrollPercent * 0.5)); // Keep it in red/orange range
             document.documentElement.style.setProperty('--dynamic-hue', hue);
-            
+
             ticking = false;
         }
 
@@ -1056,7 +1200,7 @@
                 ticking = true;
             }
         }
-        
+
         // Use a single, optimized event listener for all scroll effects
         window.addEventListener('scroll', requestUpdate);
 
@@ -1082,56 +1226,21 @@
         // FIX: Create particles less frequently to improve performance
         setInterval(createParticle, 500);
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll(
-                '.service-card, .gallery-item, .process-step, .fade-in'
-            );
-            
-            animatedElements.forEach(el => {
-                observer.observe(el);
-            });
-
-            // FIX: Faster staggered animation for service cards
-            const serviceCards = document.querySelectorAll('.service-card');
-            serviceCards.forEach((card, index) => {
-                card.style.transitionDelay = `${index * 50}ms`;
-            });
-
-            // FIX: Faster staggered animation for gallery items
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            galleryItems.forEach((item, index) => {
-                item.style.transitionDelay = `${index * 75}ms`;
-            });
-
-            // FIX: Faster staggered animation for process steps
-            const processSteps = document.querySelectorAll('.process-step');
-            processSteps.forEach((step, index) => {
-                step.style.transitionDelay = `${index * 100}ms`;
-            });
-        });
-        
         // Add keyboard navigation support
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 mobileMenu.classList.remove('active');
             }
         });
     </script>
+    <!-- Google Analytics Placeholder -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
 </body>
+
 </html>
